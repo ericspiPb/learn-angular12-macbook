@@ -1,0 +1,31 @@
+[
+  {
+    "name": [
+      { "value": "Macbook Pro 14\"", "price": 15999 },
+      { "value": "Macbook Pro 16\"", "price": 19799 }
+    ],
+    "color": [
+      { "value": "Space Gray", "price": 0, "color": "darkgray", "photo": "/assets/images/colors/mbp16-spacegray-select-202110.jpg" },
+      { "value": "Silver", "price": 0, "color": "silver", "photo": "/assets/images/colors/mbp16-silver-select-202110.jpg"  }
+    ],
+    "chip": [
+      { "value": "M1 Pro 8 Core CPU 14 Core GPU", "price": 0 },
+      { "value": "M1 Pro 10 Core CPU 14 Core GPU", "price": 1500 },
+      { "value": "M1 Pro 10 Core CPU 16 Core GPU", "price": 2300 },
+      { "value": "M1 Max 10 Core CPU 24 Core GPU", "price": 3800 },
+      { "value": "M1 Max 10 Core CPU 32 Core GPU", "price": 5300 }
+    ],
+    "memory": [
+      { "value": "16GB unified memory", "price": 0 },
+      { "value": "32GB unified memory", "price": 3000 },
+      { "value": "64GB unified memory", "price": 6000 }
+    ],
+    "storage": [
+      { "value": "512GB SSD storage", "price": 0 },
+      { "value": "1TB SSD storage", "price": 1500 },
+      { "value": "2TB SSD storage", "price": 4500 },
+      { "value": "4TB SSD storage", "price": 9000 },
+      { "value": "8TB SSD storage", "price": 18000 }
+    ]
+  }
+]

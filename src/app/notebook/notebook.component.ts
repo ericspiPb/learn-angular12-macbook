@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-notebook',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
 })
 export class NotebookComponent {
 
-  constructor() { }
+  macbooks = this.productService.getMacbookInfo();
+
+  constructor(private productService: ProductService) { }
 }

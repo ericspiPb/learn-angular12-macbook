@@ -1,1 +1,20 @@
-<p>Price: {{ 9999 }}</p>
+<div *ngFor="let macbook of macbooks | async">
+  <div *ngFor="let options of macbook | keyvalue">
+    <container-element [ngSwitch]="options.key">
+      <div *ngSwitchCase="'color'">
+        <mat-radio-group class="option">
+          <div *ngFor="let colorable of options.value">
+            <mat-radio-button [value]="colorable.value" [class]="$any(colorable).color">{{ $any(colorable).color | titlecase }}</mat-radio-button>
+          </div>
+        </mat-radio-group>
+      </div>
+      <div *ngSwitchDefault>
+        <div class="option">
+          <div *ngFor="let priceable of options.value">
+            <span>{{ priceable.value }}</span>
+          </div>
+        </div>
+      </div>
+    </container-element>
+  </div>
+</div>

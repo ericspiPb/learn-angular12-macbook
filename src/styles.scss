@@ -3,3 +3,35 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.mat-app-background {
+  background-color: rgba(128, 128, 128, 0.95) !important;
+}
+
+/* ovrride Material style */
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element.darkgray {
+  opacity: 0 !important; /*click effect color change*/
+  background-color: #333 !important;
+}
+
+.mat-radio-button.mat-accent.darkgray .mat-radio-inner-circle {
+  transform: scale(1);
+  background-color: #333 !important; /*inner circle color change*/
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked.darkgray .mat-radio-outer-circle {
+  border-color: #333 !important; /*outer ring color change*/
+}
+
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element.silver {
+  opacity: 0 !important; /*click effect color change*/
+  background-color: silver !important;
+}
+
+.mat-radio-button.mat-accent.silver .mat-radio-inner-circle {
+  transform: scale(1);
+  background-color: silver !important; /*inner circle color change*/
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked.silver .mat-radio-outer-circle {
+  border-color: silver !important; /*outer ring color change*/
+}

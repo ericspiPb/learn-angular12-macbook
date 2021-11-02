@@ -1,14 +1,24 @@
-import { Product } from '../interfaces/product.interface';
+export interface Priceable {
+  value: string;
+  price: number;
+}
 
-export class MacbookPro implements Product {
+export interface Photoable extends Priceable {
+  photo: string;
+}
+
+export interface Colorable extends Priceable, Photoable {
+  color: string;
+}
+
+export class MacbookPro {
 
   constructor(
-    public price: number,
-    public color: string,
-    public chip: string,
-    public display: number,
-    public memory: string,
-    public storage: string,
+    public name: Priceable[],
+    public color: Colorable[],
+    public chip: Photoable[],
+    public memory: Priceable[],
+    public storage: Priceable[],
   ) { }
 
 }
