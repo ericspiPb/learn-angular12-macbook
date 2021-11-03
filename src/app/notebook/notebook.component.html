@@ -2,13 +2,16 @@
   <div *ngFor="let options of macbook | keyvalue">
     <container-element [ngSwitch]="options.key">
       <div *ngSwitchCase="'color'">
-        <div *ngFor="let photoable of options.value">
-          <img src="{{ $any(photoable).photo }}" alt="{{ $any(photoable).color | titlecase }}" />
+        <div class="photo" *ngIf="color === 'darkgray'">
+          <img class="photo" src="{{ $any(options.value[0]).photo }}" alt="{{ $any(options.value[0]).color | titlecase }}" />
+        </div>
+        <div class="photo" *ngIf="color === 'silver'">
+          <img src="{{ $any(options.value[1]).photo }}" alt="{{ $any(options.value[1]).color | titlecase }}" />
         </div>
       </div>
       <div *ngSwitchCase="'name'">
         <div *ngFor="let priceable of options.value">
-          <h1>{{ priceable.value }}</h1>
+          <h1 class="name">{{ priceable.value }}</h1>
         </div>
       </div>
       <div *ngSwitchDefault></div>
@@ -16,11 +19,10 @@
   </div>
   <div *ngFor="let options of macbook | keyvalue">
     <container-element [ngSwitch]="options.key">
-      <div *ngSwitchCase="'name'"></div>
       <div *ngSwitchCase="'color'">
         <mat-radio-group class="option">
           <div *ngFor="let colorable of options.value">
-            <mat-radio-button [value]="colorable.value" [class]="$any(colorable).color">{{ $any(colorable).color | titlecase }}</mat-radio-button>
+            <mat-radio-button [value]="colorable.value" [class]="$any(colorable).color" [(ngModel)]="color" [checked]="color === colorable.value">{{ $any(colorable).color | titlecase }}</mat-radio-button>
           </div>
         </mat-radio-group>
       </div>

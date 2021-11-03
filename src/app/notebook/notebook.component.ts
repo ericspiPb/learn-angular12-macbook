@@ -13,6 +13,7 @@ import { MacbookPro } from '../models/macbook-pro.model';
 export class NotebookComponent {
 
   macbooks: MacbookPro[] = [];
+  color: 'darkgray' | 'silver' = 'darkgray';
 
   constructor(private productService: ProductService) {
     this.productService.getMacbookInfo()
