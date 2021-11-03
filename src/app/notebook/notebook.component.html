@@ -1,6 +1,22 @@
-<div *ngFor="let macbook of macbooks | async">
+<div *ngFor="let macbook of macbooks">
   <div *ngFor="let options of macbook | keyvalue">
     <container-element [ngSwitch]="options.key">
+      <div *ngSwitchCase="'color'">
+        <div *ngFor="let photoable of options.value">
+          <img src="{{ $any(photoable).photo }}" alt="{{ $any(photoable).color | titlecase }}" />
+        </div>
+      </div>
+      <div *ngSwitchCase="'name'">
+        <div *ngFor="let priceable of options.value">
+          <h1>{{ priceable.value }}</h1>
+        </div>
+      </div>
+      <div *ngSwitchDefault></div>
+    </container-element>
+  </div>
+  <div *ngFor="let options of macbook | keyvalue">
+    <container-element [ngSwitch]="options.key">
+      <div *ngSwitchCase="'name'"></div>
       <div *ngSwitchCase="'color'">
         <mat-radio-group class="option">
           <div *ngFor="let colorable of options.value">
@@ -8,13 +24,13 @@
           </div>
         </mat-radio-group>
       </div>
-      <div *ngSwitchDefault>
-        <div class="option">
-          <div *ngFor="let priceable of options.value">
-            <span>{{ priceable.value }}</span>
-          </div>
-        </div>
+      <div *ngSwitchCase="'chip'">
       </div>
+      <div *ngSwitchCase="'memory'">
+      </div>
+      <div *ngSwitchCase="'storage'">
+      </div>
+      <div *ngSwitchDefault></div>
     </container-element>
   </div>
 </div>
