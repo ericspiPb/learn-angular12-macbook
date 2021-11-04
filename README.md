@@ -1,6 +1,9 @@
-# LearnAngular12Macbook
+# Learn Angular13 Macbook
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+## package manager changed from npm to yarn
+```ng config -g cli.packageManager yarn```
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12 and upgraded to 13.0.0.
 
 ## Development server
 
